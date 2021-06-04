@@ -3,8 +3,12 @@ project "GLFW"
 	language "C"
 	staticruntime "off"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("../../../bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("../../../bin-int/" .. outputdir .. "/%{prj.name}")
+
+	makesettings [[
+    CC = gcc
+	]]
 
 	files
 	{
